@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} KISSTWEB {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+{#   <link rel="stylesheet"#}
+{#          href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">#}
+</head>
+<body>
+    <header>
+        {% include 'navbar.html' %}
+    </header>
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+</body>
+</html>
